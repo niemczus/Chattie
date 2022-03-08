@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		32B95A5227D747EF00CA63A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A5127D747EF00CA63A4 /* AppDelegate.swift */; };
 		32B95A5427D747EF00CA63A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A5327D747EF00CA63A4 /* SceneDelegate.swift */; };
-		32B95A5627D747EF00CA63A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A5527D747EF00CA63A4 /* ViewController.swift */; };
 		32B95A5927D747EF00CA63A4 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B95A5727D747EF00CA63A4 /* Auth.storyboard */; };
 		32B95A5C27D747EF00CA63A4 /* Chattie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A5A27D747EF00CA63A4 /* Chattie.xcdatamodeld */; };
 		32B95A5E27D747F000CA63A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B95A5D27D747F000CA63A4 /* Assets.xcassets */; };
 		32B95A6127D747F000CA63A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B95A5F27D747F000CA63A4 /* LaunchScreen.storyboard */; };
+		32B95A6927D7710A00CA63A4 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B95A6827D7710A00CA63A4 /* Chat.storyboard */; };
+		32B95A6B27D780BE00CA63A4 /* SingInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A6A27D780BE00CA63A4 /* SingInVC.swift */; };
+		32B95A6D27D7820C00CA63A4 /* SingUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32B95A4E27D747EF00CA63A4 /* Chattie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chattie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B95A5127D747EF00CA63A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B95A5327D747EF00CA63A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		32B95A5527D747EF00CA63A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32B95A5827D747EF00CA63A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		32B95A5B27D747EF00CA63A4 /* Chattie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chattie.xcdatamodel; sourceTree = "<group>"; };
 		32B95A5D27D747F000CA63A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32B95A6027D747F000CA63A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32B95A6227D747F000CA63A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B95A6827D7710A00CA63A4 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		32B95A6A27D780BE00CA63A4 /* SingInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInVC.swift; sourceTree = "<group>"; };
+		32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +64,14 @@
 			children = (
 				32B95A5127D747EF00CA63A4 /* AppDelegate.swift */,
 				32B95A5327D747EF00CA63A4 /* SceneDelegate.swift */,
-				32B95A5527D747EF00CA63A4 /* ViewController.swift */,
 				32B95A5727D747EF00CA63A4 /* Auth.storyboard */,
+				32B95A6827D7710A00CA63A4 /* Chat.storyboard */,
 				32B95A5D27D747F000CA63A4 /* Assets.xcassets */,
 				32B95A5F27D747F000CA63A4 /* LaunchScreen.storyboard */,
 				32B95A6227D747F000CA63A4 /* Info.plist */,
 				32B95A5A27D747EF00CA63A4 /* Chattie.xcdatamodeld */,
+				32B95A6A27D780BE00CA63A4 /* SingInVC.swift */,
+				32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */,
 			);
 			path = Chattie;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 			files = (
 				32B95A6127D747F000CA63A4 /* LaunchScreen.storyboard in Resources */,
 				32B95A5E27D747F000CA63A4 /* Assets.xcassets in Resources */,
+				32B95A6927D7710A00CA63A4 /* Chat.storyboard in Resources */,
 				32B95A5927D747EF00CA63A4 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B95A5627D747EF00CA63A4 /* ViewController.swift in Sources */,
 				32B95A5227D747EF00CA63A4 /* AppDelegate.swift in Sources */,
+				32B95A6B27D780BE00CA63A4 /* SingInVC.swift in Sources */,
+				32B95A6D27D7820C00CA63A4 /* SingUpVC.swift in Sources */,
 				32B95A5C27D747EF00CA63A4 /* Chattie.xcdatamodeld in Sources */,
 				32B95A5427D747EF00CA63A4 /* SceneDelegate.swift in Sources */,
 			);

@@ -3,14 +3,15 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sing InVC-->
         <scene sceneID="wxB-4B-4eC">
             <objects>
-                <tableViewController id="mPA-Vc-3Y8" customClass="ViewController" customModule="Chattie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mPA-Vc-3Y8" customClass="SingInVC" customModule="Chattie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="7hk-bf-AKg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,17 +105,25 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pt-ax-qUa">
                                                     <rect key="frame" x="56" y="11" width="263" height="48"/>
-                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                                        <backgroundConfiguration key="background" cornerRadius="25" strokeWidth="4" strokeOutset="0.0">
+                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                            <color key="strokeColor" red="0.66666666669999997" green="0.47058823529999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </backgroundConfiguration>
                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapSingIn:" destination="mPA-Vc-3Y8" eventType="touchUpInside" id="qXc-3j-GaP"/>
+                                                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.signInToApp" modalPresentationStyle="fullScreen" id="rUN-mY-0pi"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="8pt-ax-qUa" secondAttribute="bottom" id="8Xt-FK-iWc"/>
-                                                <constraint firstItem="8pt-ax-qUa" firstAttribute="leading" secondItem="WaW-hn-uFJ" secondAttribute="leadingMargin" constant="40" id="EUi-SP-4P8"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8pt-ax-qUa" secondAttribute="trailing" constant="40" id="uPW-FO-0Hu"/>
+                                                <constraint firstItem="8pt-ax-qUa" firstAttribute="leading" relation="lessThanOrEqual" secondItem="WaW-hn-uFJ" secondAttribute="leadingMargin" constant="40" id="EUi-SP-4P8"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="8pt-ax-qUa" secondAttribute="trailing" constant="40" id="uPW-FO-0Hu"/>
                                                 <constraint firstItem="8pt-ax-qUa" firstAttribute="top" secondItem="WaW-hn-uFJ" secondAttribute="topMargin" id="uvx-CF-HGj"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -140,8 +149,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rTT-GU-VAc" firstAttribute="top" secondItem="6Km-Vd-Q4c" secondAttribute="topMargin" id="9rI-k5-jt9"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="rTT-GU-VAc" secondAttribute="trailing" constant="40" id="a6P-Kl-Mlh"/>
-                                                <constraint firstItem="rTT-GU-VAc" firstAttribute="leading" secondItem="6Km-Vd-Q4c" secondAttribute="leadingMargin" constant="40" id="gKR-bZ-Ira"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="rTT-GU-VAc" secondAttribute="trailing" constant="40" id="a6P-Kl-Mlh"/>
+                                                <constraint firstItem="rTT-GU-VAc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Km-Vd-Q4c" secondAttribute="leadingMargin" constant="40" id="gKR-bZ-Ira"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="rTT-GU-VAc" secondAttribute="bottom" id="gc1-jJ-DtQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -160,10 +169,18 @@
             </objects>
             <point key="canvasLocation" x="-308" y="74.630541871921181"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Chat-->
+        <scene sceneID="tZu-C5-bVV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="inl-bS-tvL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DpK-Zj-rPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="434"/>
+        </scene>
+        <!--Sing UpVC-->
         <scene sceneID="Bem-gM-AQC">
             <objects>
-                <tableViewController id="uVH-fe-oSu" sceneMemberID="viewController">
+                <tableViewController id="uVH-fe-oSu" customClass="SingUpVC" customModule="Chattie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ibe-Xa-7iN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,11 +296,19 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-Sa-WvW">
                                                     <rect key="frame" x="56" y="11" width="263" height="48"/>
-                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                                        <backgroundConfiguration key="background" cornerRadius="25" strokeWidth="5">
+                                                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                            <color key="strokeColor" red="0.66666666669999997" green="0.47058823529999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </backgroundConfiguration>
                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="didTapSignUpButton:" destination="uVH-fe-oSu" eventType="touchUpInside" id="wFs-Oa-VlV"/>
+                                                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.singUpToApp" modalPresentationStyle="fullScreen" id="WxB-gt-xwJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -336,13 +361,16 @@
             <point key="canvasLocation" x="-338" y="831"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WxB-gt-xwJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="chattieIcon" width="1024" height="1024"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
