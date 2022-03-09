@@ -7,11 +7,10 @@
 
 import UIKit
 
-class SingUpVC: UITableViewController {
+class SingUpVC: AuthTableViewController {
 
     @IBAction func didTapSignUpButton(_ sender: UIButton) {
         performSegue(withIdentifier: "segue.Auth.singUpToApp", sender: nil)
     }
-    
-        
+     
 }

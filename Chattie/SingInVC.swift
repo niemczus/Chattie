@@ -7,14 +7,10 @@
 
 import UIKit
 
-class SingInVC: UITableViewController {
+class SingInVC: AuthTableViewController {
 
-    
     @IBAction func didTapSingIn(_ sender: UIButton) {
-        
         performSegue(withIdentifier: "segue.Auth.signInToApp", sender: nil)
-        
     }
-    
     
 }
