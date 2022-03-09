@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Medium.ttf">
+            <string>Nunito-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Sing InVC-->
         <scene sceneID="wxB-4B-4eC">
@@ -33,11 +41,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="263" height="99"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chattie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQI-hr-rwY">
-                                                            <rect key="frame" x="81.333333333333343" y="107" width="100.66666666666666" height="39"/>
+                                                            <rect key="frame" x="47.333333333333329" y="107" width="168.33333333333337" height="39"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="39" id="xC4-E3-3Lf"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="50"/>
                                                             <color key="textColor" systemColor="systemPurpleColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -62,7 +70,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZf-ec-noe">
                                                     <rect key="frame" x="32" y="11" width="311" height="51"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                 </textField>
                                             </subviews>
@@ -84,7 +92,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0nW-m9-ux2">
                                                     <rect key="frame" x="32" y="11" width="311" height="51"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
@@ -110,8 +118,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="Sign In">
                                                         <backgroundConfiguration key="background" cornerRadius="25" strokeWidth="4" strokeOutset="0.0">
                                                             <color key="backgroundColor" name="AccentColor"/>
-                                                            <color key="strokeColor" red="0.66666666669999997" green="0.47058823529999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="strokeColor" systemColor="systemGray5Color"/>
                                                         </backgroundConfiguration>
+                                                        <fontDescription key="titleFontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                     <connections>
@@ -140,6 +149,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Don't have an account?">
+                                                        <fontDescription key="titleFontDescription" name="Nunito-Medium" family="Nunito" pointSize="17"/>
                                                         <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                     </buttonConfiguration>
                                                     <connections>
@@ -202,11 +212,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="263" height="99"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chattie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-Ur-mxc">
-                                                            <rect key="frame" x="81.333333333333343" y="107" width="100.66666666666666" height="39"/>
+                                                            <rect key="frame" x="47.333333333333329" y="107" width="168.33333333333337" height="39"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="39" id="Vlq-3s-SGj"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                            <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="50"/>
                                                             <color key="textColor" systemColor="systemPurpleColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -231,7 +241,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUK-OU-b8t">
                                                     <rect key="frame" x="32" y="11" width="311" height="51"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
                                             </subviews>
@@ -253,7 +263,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-PE-Ksg">
                                                     <rect key="frame" x="32" y="11" width="311" height="51"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                 </textField>
                                             </subviews>
@@ -275,7 +285,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mkc-X1-aBZ">
                                                     <rect key="frame" x="32" y="11" width="311" height="51"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
@@ -301,8 +311,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="Sign Up">
                                                         <backgroundConfiguration key="background" cornerRadius="25" strokeWidth="5">
                                                             <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                            <color key="strokeColor" red="0.66666666669999997" green="0.47058823529999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="strokeColor" systemColor="systemGray5Color"/>
                                                         </backgroundConfiguration>
+                                                        <fontDescription key="titleFontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                     <connections>
@@ -331,6 +342,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Already have an account?">
+                                                        <fontDescription key="titleFontDescription" name="Nunito-Medium" family="Nunito" pointSize="17"/>
                                                         <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                     </buttonConfiguration>
                                                     <connections>
@@ -362,7 +374,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WxB-gt-xwJ"/>
+        <segue reference="rUN-mY-0pi"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chattieIcon" width="1024" height="1024"/>
@@ -371,6 +383,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

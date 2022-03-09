@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ON-Rb-19L">
                                 <rect key="frame" x="0.0" y="806" width="414" height="90"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-BS-Xuo">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-BS-Xuo">
                                         <rect key="frame" x="12" y="4" width="394" height="56"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-fa-DDt">
@@ -31,14 +31,15 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-Gx-B6g">
-                                                <rect key="frame" x="336.5" y="0.0" width="57.5" height="56"/>
+                                                <rect key="frame" x="322.5" y="0.0" width="71.5" height="56"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="" buttonSize="large">
-                                                    <imageReference key="image" image="arrow.up.square.fill" catalog="system" symbolScale="large"/>
-                                                    <backgroundConfiguration key="background" cornerRadius="50" strokeWidth="3" strokeOutset="0.0">
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="strokeColor" systemColor="systemBlueColor"/>
+                                                    <imageReference key="image" image="arrow.turn.right.up" catalog="system" symbolScale="large"/>
+                                                    <backgroundConfiguration key="background" cornerRadius="23" strokeWidth="3" strokeOutset="0.0">
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -125,6 +126,7 @@
                         <navigationBarAppearance key="scrollEdgeAppearance" backgroundEffect="prominent">
                             <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </textAttributes>
                             <textAttributes key="largeTitleTextAttributes">
@@ -143,18 +145,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.up.square.fill" catalog="system" width="128" height="114"/>
+        <image name="arrow.turn.right.up" catalog="system" width="120" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
