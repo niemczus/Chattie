@@ -174,6 +174,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="7Cw-pA-40n"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="pZf-ec-noe" id="0YE-7o-CLG"/>
+                        <outlet property="passwordTextField" destination="0nW-m9-ux2" id="c8O-zb-xrh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZr-io-Koe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,15 +322,15 @@
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="didTapSignUpButton:" destination="uVH-fe-oSu" eventType="touchUpInside" id="wFs-Oa-VlV"/>
-                                                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.singUpToApp" modalPresentationStyle="fullScreen" id="WxB-gt-xwJ"/>
+                                                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.singUpToApp" modalPresentationStyle="fullScreen" id="Nfv-SX-VHb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="bkW-Sa-WvW" secondAttribute="bottom" id="DnZ-Fg-erh"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="bkW-Sa-WvW" secondAttribute="trailing" constant="40" id="dEq-f4-3dg"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="bkW-Sa-WvW" secondAttribute="trailing" constant="40" id="dEq-f4-3dg"/>
                                                 <constraint firstItem="bkW-Sa-WvW" firstAttribute="top" secondItem="SNQ-pH-JKf" secondAttribute="topMargin" id="fdm-Cn-tIZ"/>
-                                                <constraint firstItem="bkW-Sa-WvW" firstAttribute="leading" secondItem="SNQ-pH-JKf" secondAttribute="leadingMargin" constant="40" id="iVD-hL-I8h"/>
+                                                <constraint firstItem="bkW-Sa-WvW" firstAttribute="leading" relation="lessThanOrEqual" secondItem="SNQ-pH-JKf" secondAttribute="leadingMargin" constant="40" id="iVD-hL-I8h"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -352,9 +356,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NaC-u5-KI7" firstAttribute="top" secondItem="Fdq-sV-uN2" secondAttribute="topMargin" id="8pH-ST-ftS"/>
-                                                <constraint firstItem="NaC-u5-KI7" firstAttribute="leading" secondItem="Fdq-sV-uN2" secondAttribute="leadingMargin" constant="40" id="A0T-r6-ZKV"/>
+                                                <constraint firstItem="NaC-u5-KI7" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Fdq-sV-uN2" secondAttribute="leadingMargin" constant="40" id="A0T-r6-ZKV"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="NaC-u5-KI7" secondAttribute="bottom" id="SXl-ib-7LD"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="NaC-u5-KI7" secondAttribute="trailing" constant="40" id="mVl-Gi-TYZ"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="NaC-u5-KI7" secondAttribute="trailing" constant="40" id="mVl-Gi-TYZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -367,6 +371,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8mw-zj-6ya"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="aEX-PE-Ksg" id="Ei2-yy-wtL"/>
+                        <outlet property="passwordTextField" destination="mkc-X1-aBZ" id="KO1-70-EZ9"/>
+                        <outlet property="usernameTextField" destination="vUK-OU-b8t" id="zga-Ms-Gwm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Y3-FF-s1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -374,12 +383,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rUN-mY-0pi"/>
+        <segue reference="Nfv-SX-VHb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chattieIcon" width="1024" height="1024"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
