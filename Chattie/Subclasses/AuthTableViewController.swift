@@ -8,6 +8,14 @@
 import UIKit
 
 class AuthTableViewController: UITableViewController {
+    
+    func showInvalidFormAlert(with message: String? = nil) {
+        let alertMessage = message ?? "Please enter valid information below."
+        let alert = UIAlertController(title: "Invalid info", message: alertMessage, preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Understand", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

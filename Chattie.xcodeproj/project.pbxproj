@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32067BCA27DB95D900C6AC20 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32067BC927DB95D900C6AC20 /* StringExtensions.swift */; };
 		322CFBF127D8D16700F1E6FF /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 322CFBE127D8D16700F1E6FF /* Nunito-Medium.ttf */; };
 		322CFBF227D8D16700F1E6FF /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 322CFBE227D8D16700F1E6FF /* Nunito-ExtraBoldItalic.ttf */; };
 		322CFBF327D8D16700F1E6FF /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 322CFBE327D8D16700F1E6FF /* Nunito-ExtraBold.ttf */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32067BC927DB95D900C6AC20 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		322CFBE127D8D16700F1E6FF /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
 		322CFBE227D8D16700F1E6FF /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		322CFBE327D8D16700F1E6FF /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				3258703C27DB3B760028FEF9 /* GoogleService-Info.plist */,
 				322CFBE027D8D16700F1E6FF /* Resources */,
 				32067BC527DB8F5000C6AC20 /* Subclasses */,
+				32067BC927DB95D900C6AC20 /* StringExtensions.swift */,
 			);
 			path = Chattie;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32067BCA27DB95D900C6AC20 /* StringExtensions.swift in Sources */,
 				32B95A5227D747EF00CA63A4 /* AppDelegate.swift in Sources */,
 				32B95A6B27D780BE00CA63A4 /* SingInVC.swift in Sources */,
 				32B95A6D27D7820C00CA63A4 /* SingUpVC.swift in Sources */,
