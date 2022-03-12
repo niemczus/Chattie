@@ -125,7 +125,6 @@
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="didTapSingIn:" destination="mPA-Vc-3Y8" eventType="touchUpInside" id="qXc-3j-GaP"/>
-                                                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.signInToApp" modalPresentationStyle="fullScreen" id="rUN-mY-0pi"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -177,6 +176,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="pZf-ec-noe" id="0YE-7o-CLG"/>
                         <outlet property="passwordTextField" destination="0nW-m9-ux2" id="c8O-zb-xrh"/>
+                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.signInToApp" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="zVN-gr-Nyg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZr-io-Koe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -322,7 +322,6 @@
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="didTapSignUpButton:" destination="uVH-fe-oSu" eventType="touchUpInside" id="wFs-Oa-VlV"/>
-                                                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.singUpToApp" modalPresentationStyle="fullScreen" id="Nfv-SX-VHb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -375,6 +374,7 @@
                         <outlet property="emailTextField" destination="aEX-PE-Ksg" id="Ei2-yy-wtL"/>
                         <outlet property="passwordTextField" destination="mkc-X1-aBZ" id="KO1-70-EZ9"/>
                         <outlet property="usernameTextField" destination="vUK-OU-b8t" id="zga-Ms-Gwm"/>
+                        <segue destination="inl-bS-tvL" kind="presentation" identifier="segue.Auth.singUpToApp" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="tDB-f1-BqI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Y3-FF-s1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -383,7 +383,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nfv-SX-VHb"/>
+        <segue reference="tDB-f1-BqI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chattieIcon" width="1024" height="1024"/>
