@@ -17,6 +17,16 @@ class AuthTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
 
+    func standardSegueToApp(segue: UIStoryboardSegue, sender: Any?) {
+        if
+            let navController = segue.destination as? UINavigationController,
+            let messagesVC = navController.topViewController as? MessagesVC,
+            let chattieUser = sender as? ChattieUser {
+            messagesVC.chattieUser = chattieUser
+            print(chattieUser)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         let defaultHeight = super.tableView(tableView, heightForRowAt: indexPath)

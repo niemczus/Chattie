@@ -19,16 +19,21 @@ class SingInVC: AuthTableViewController {
             let email = emailTextField.text,
             email.isValidEmail,
             let password = passwordTextField.text,
-            password.count > 5
+            password.count > 3
         else { showInvalidFormAlert(); return}
         
         Auth.auth().signIn(withEmail: email, password: password) { authResult, authError in
             if let error = authError {
                 print(error)
                 self.showInvalidFormAlert(with: error.localizedDescription)
-            } else if let result = authResult {
-                print(result.user)
-                self.performSegue(withIdentifier: "segue.Auth.signInToApp", sender: nil)
+            }
+            
+            if
+                let result = authResult,
+                let chattieUser = ChattieUser(firbaseUser: result.user)
+            {
+            
+                self.performSegue(withIdentifier: "segue.Auth.signInToApp", sender: chattieUser)
             }
         }
     }
@@ -36,5 +41,9 @@ class SingInVC: AuthTableViewController {
     
     @IBAction func didTapSingIn(_ sender: UIButton) {
         singIn()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        standardSegueToApp(segue: segue, sender: sender)
     }
 }

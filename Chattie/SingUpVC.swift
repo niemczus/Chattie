@@ -20,8 +20,8 @@ class SingUpVC: AuthTableViewController {
         changeRequest.commitChanges { requestError in
             if let unwrappedRequestError = requestError {
                 self.showInvalidFormAlert(with: unwrappedRequestError.localizedDescription)
-            } else {
-                self.performSegue(withIdentifier: "segue.Auth.singUpToApp", sender: nil)
+            } else if let chattieUser = ChattieUser(firbaseUser: firebaseUser) {
+                self.performSegue(withIdentifier: "segue.Auth.singUpToApp", sender: chattieUser)
             }
         }
     }
@@ -61,5 +61,10 @@ class SingUpVC: AuthTableViewController {
     @IBAction func didTapSignUpButton(_ sender: UIButton) {
         createUser()
     }
-     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        standardSegueToApp(segue: segue, sender: sender)
+    }
+    
 }
