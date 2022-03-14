@@ -143,15 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		32067BC527DB8F5000C6AC20 /* Subclasses */ = {
-			isa = PBXGroup;
-			children = (
-				322CFC0127D8F25700F1E6FF /* AuthTableViewController.swift */,
-				322CFC0327D8F4A300F1E6FF /* RoundedButton.swift */,
-			);
-			path = Subclasses;
-			sourceTree = "<group>";
-		};
 		322CFBE027D8D16700F1E6FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +166,106 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3246EB8727DF3EDF0006340C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32576B4727DD38D3004F9924 /* ChattieUser.swift */,
+				32067BC927DB95D900C6AC20 /* StringExtensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3246EB8827DF3EF70006340C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				322CFC0327D8F4A300F1E6FF /* RoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3246EB8927DF3F060006340C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32B95A5127D747EF00CA63A4 /* AppDelegate.swift */,
+				32B95A5327D747EF00CA63A4 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3246EB8A27DF3F550006340C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32B95A5727D747EF00CA63A4 /* Auth.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3246EB8B27DF3F610006340C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */,
+				32B95A6A27D780BE00CA63A4 /* SingInVC.swift */,
+				322CFC0127D8F25700F1E6FF /* AuthTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3246EB8C27DF3F930006340C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32576B4927DD4270004F9924 /* MessagesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3246EB8D27DF3F9F0006340C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32B95A6827D7710A00CA63A4 /* Chat.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		329FCB5D27DF36BB008FF52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32B95A5D27D747F000CA63A4 /* Assets.xcassets */,
+				32B95A5F27D747F000CA63A4 /* LaunchScreen.storyboard */,
+				3258703C27DB3B760028FEF9 /* GoogleService-Info.plist */,
+				32B95A5A27D747EF00CA63A4 /* Chattie.xcdatamodeld */,
+				322CFBE027D8D16700F1E6FF /* Resources */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		329FCB5E27DF36D8008FF52C /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				3246EB8727DF3EDF0006340C /* Model */,
+				3246EB8827DF3EF70006340C /* View */,
+				3246EB8927DF3F060006340C /* Controller */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		329FCB5F27DF3715008FF52C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3246EB8A27DF3F550006340C /* View */,
+				3246EB8B27DF3F610006340C /* Controller */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		329FCB6027DF3727008FF52C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3246EB8D27DF3F9F0006340C /* View */,
+				3246EB8C27DF3F930006340C /* Controller */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		32B95A4527D747EF00CA63A4 = {
 			isa = PBXGroup;
 			children = (
@@ -194,22 +285,11 @@
 		32B95A5027D747EF00CA63A4 /* Chattie */ = {
 			isa = PBXGroup;
 			children = (
-				32B95A5127D747EF00CA63A4 /* AppDelegate.swift */,
-				32B95A5327D747EF00CA63A4 /* SceneDelegate.swift */,
-				32B95A5727D747EF00CA63A4 /* Auth.storyboard */,
-				32B95A6827D7710A00CA63A4 /* Chat.storyboard */,
-				32B95A5D27D747F000CA63A4 /* Assets.xcassets */,
-				32B95A5F27D747F000CA63A4 /* LaunchScreen.storyboard */,
+				329FCB5D27DF36BB008FF52C /* Supporting Files */,
+				329FCB5E27DF36D8008FF52C /* Global */,
+				329FCB5F27DF3715008FF52C /* Auth */,
+				329FCB6027DF3727008FF52C /* Chat */,
 				32B95A6227D747F000CA63A4 /* Info.plist */,
-				32B95A5A27D747EF00CA63A4 /* Chattie.xcdatamodeld */,
-				32B95A6A27D780BE00CA63A4 /* SingInVC.swift */,
-				32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */,
-				3258703C27DB3B760028FEF9 /* GoogleService-Info.plist */,
-				322CFBE027D8D16700F1E6FF /* Resources */,
-				32067BC527DB8F5000C6AC20 /* Subclasses */,
-				32067BC927DB95D900C6AC20 /* StringExtensions.swift */,
-				32576B4727DD38D3004F9924 /* ChattieUser.swift */,
-				32576B4927DD4270004F9924 /* MessagesVC.swift */,
 			);
 			path = Chattie;
 			sourceTree = "<group>";
