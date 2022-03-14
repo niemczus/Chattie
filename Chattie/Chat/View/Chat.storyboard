@@ -123,6 +123,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="chatContainerViewBottomConstraint" destination="Eba-g9-FE1" id="oY6-pG-eAx"/>
                         <segue destination="eKg-ft-EZ4" kind="presentation" identifier="segue.Chat.messegesToSignIn" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="57T-Rf-qb8"/>
                     </connections>
                 </viewController>
