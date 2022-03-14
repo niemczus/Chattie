@@ -203,8 +203,8 @@
 		3246EB8B27DF3F610006340C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */,
 				32B95A6A27D780BE00CA63A4 /* SingInVC.swift */,
+				32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */,
 				322CFC0127D8F25700F1E6FF /* AuthTableViewController.swift */,
 			);
 			path = Controller;

@@ -114,11 +114,29 @@
                             <constraint firstItem="2ON-Rb-19L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uvq-ou-mR2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Messages" largeTitleDisplayMode="always" id="4AY-iY-jK7"/>
+                    <navigationItem key="navigationItem" title="Messages" largeTitleDisplayMode="always" id="4AY-iY-jK7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="signOutIcon" id="7MB-yz-eGd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapSignOut:" destination="Y6W-OH-hqX" id="AX1-pS-Ude"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="eKg-ft-EZ4" kind="presentation" identifier="segue.Chat.messegesToSignIn" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="57T-Rf-qb8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979.71014492753636" y="77.678571428571431"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="Oti-sm-m7g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" id="eKg-ft-EZ4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PI0-kV-Lc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mVX-X9-ne9">
@@ -151,6 +169,7 @@
     </scenes>
     <resources>
         <image name="arrow.turn.right.up" catalog="system" width="120" height="128"/>
+        <image name="signOutIcon" width="25" height="25"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

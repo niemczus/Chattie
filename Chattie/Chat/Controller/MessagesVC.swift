@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MessagesVC: UIViewController {
     
@@ -17,5 +18,14 @@ class MessagesVC: UIViewController {
         print("ChattieUser from messages")
         print(chattieUser ?? "none")
     
+    }
+    
+    @IBAction func didTapSignOut(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "segue.Chat.messegesToSignIn", sender: nil)
+        } catch {
+            print(error)
+        }
     }
 }

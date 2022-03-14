@@ -8,16 +8,44 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       
         FirebaseApp.configure()
+       
+//        checkAuthSignIn()
+        
         return true
     }
-
+    
+//    func checkAuthSignIn() {
+//
+//        guard
+//            let firebaseUser = Auth.auth().currentUser,
+//            let chattieUser = ChattieUser(firbaseUser: firebaseUser)
+//        else { return }
+//
+//        let chatStoryboard = UIStoryboard(name: "Chat", bundle: .main)
+//
+//        guard
+//            let navigationController = chatStoryboard.instantiateInitialViewController() as? UINavigationController,
+//            let messagesVC = navigationController.topViewController as? MessagesVC
+//        else { return }
+//
+//        print("Yeah we've done unrapped some stuff!")
+//
+//        messagesVC.chattieUser = chattieUser
+//
+//        window?.rootViewController = navigationController
+//
+//    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

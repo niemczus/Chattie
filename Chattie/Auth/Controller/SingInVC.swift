@@ -22,6 +22,7 @@ class SingInVC: AuthTableViewController {
             password.count > 3
         else { showInvalidFormAlert(); return}
         
+        
         Auth.auth().signIn(withEmail: email, password: password) { authResult, authError in
             if let error = authError {
                 print(error)

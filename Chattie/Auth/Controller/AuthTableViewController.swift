@@ -23,7 +23,6 @@ class AuthTableViewController: UITableViewController {
             let messagesVC = navController.topViewController as? MessagesVC,
             let chattieUser = sender as? ChattieUser {
             messagesVC.chattieUser = chattieUser
-            print(chattieUser)
         }
     }
     
