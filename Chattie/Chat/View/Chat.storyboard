@@ -28,7 +28,7 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-BS-Xuo">
                                         <rect key="frame" x="12" y="4" width="394" height="56"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-fa-DDt">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-fa-DDt" customClass="PlaceholderTextView" customModule="Chattie" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="317.5" height="56"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
