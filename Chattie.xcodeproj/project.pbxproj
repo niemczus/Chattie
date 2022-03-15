@@ -58,6 +58,8 @@
 		3258707227DB3DD40028FEF9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3258707127DB3DD40028FEF9 /* FirebaseStorage */; };
 		3258707427DB3DD40028FEF9 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3258707327DB3DD40028FEF9 /* FirebaseStorageCombine-Community */; };
 		3258707627DB3DD40028FEF9 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 3258707527DB3DD40028FEF9 /* FirebaseStorageSwift-Beta */; };
+		3286493427E0D517008506C0 /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3286493327E0D517008506C0 /* GrowingTextView.swift */; };
+		3286493627E105DF008506C0 /* MessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3286493527E105DF008506C0 /* MessageTextView.swift */; };
 		32B95A5227D747EF00CA63A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A5127D747EF00CA63A4 /* AppDelegate.swift */; };
 		32B95A5427D747EF00CA63A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A5327D747EF00CA63A4 /* SceneDelegate.swift */; };
 		32B95A5927D747EF00CA63A4 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B95A5727D747EF00CA63A4 /* Auth.storyboard */; };
@@ -93,6 +95,8 @@
 		32576B4727DD38D3004F9924 /* ChattieUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattieUser.swift; sourceTree = "<group>"; };
 		32576B4927DD4270004F9924 /* MessagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
 		3258703C27DB3B760028FEF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3286493327E0D517008506C0 /* GrowingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingTextView.swift; sourceTree = "<group>"; };
+		3286493527E105DF008506C0 /* MessageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextView.swift; sourceTree = "<group>"; };
 		32B95A4E27D747EF00CA63A4 /* Chattie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chattie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B95A5127D747EF00CA63A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B95A5327D747EF00CA63A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 			children = (
 				32B95A6827D7710A00CA63A4 /* Chat.storyboard */,
 				3246EB8E27DF9EED0006340C /* PlaceholderTextView.swift */,
+				3286493327E0D517008506C0 /* GrowingTextView.swift */,
+				3286493527E105DF008506C0 /* MessageTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			files = (
 				32067BCA27DB95D900C6AC20 /* StringExtensions.swift in Sources */,
 				32576B4827DD38D3004F9924 /* ChattieUser.swift in Sources */,
+				3286493627E105DF008506C0 /* MessageTextView.swift in Sources */,
 				32B95A5227D747EF00CA63A4 /* AppDelegate.swift in Sources */,
 				32B95A6B27D780BE00CA63A4 /* SingInVC.swift in Sources */,
 				32B95A6D27D7820C00CA63A4 /* SingUpVC.swift in Sources */,
@@ -428,6 +435,7 @@
 				322CFC0427D8F4A300F1E6FF /* RoundedButton.swift in Sources */,
 				32B95A5427D747EF00CA63A4 /* SceneDelegate.swift in Sources */,
 				32576B4A27DD4270004F9924 /* MessagesVC.swift in Sources */,
+				3286493427E0D517008506C0 /* GrowingTextView.swift in Sources */,
 				3246EB8F27DF9EED0006340C /* PlaceholderTextView.swift in Sources */,
 				322CFC0227D8F25700F1E6FF /* AuthTableViewController.swift in Sources */,
 			);

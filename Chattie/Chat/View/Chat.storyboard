@@ -28,17 +28,21 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFit" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-BS-Xuo">
                                         <rect key="frame" x="12" y="4" width="394" height="56"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-fa-DDt" customClass="PlaceholderTextView" customModule="Chattie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="317.5" height="56"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PIq-fa-DDt" customClass="MessageTextView" customModule="Chattie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="56"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-Gx-B6g">
-                                                <rect key="frame" x="322.5" y="0.0" width="71.5" height="56"/>
+                                                <rect key="frame" x="338" y="0.0" width="56" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="8TN-zL-fTt"/>
+                                                    <constraint firstAttribute="width" constant="56" id="rKU-t0-htr"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="" buttonSize="large">
+                                                <buttonConfiguration key="configuration" style="plain" imagePlacement="bottom" title="" buttonSize="large">
                                                     <imageReference key="image" image="arrow.turn.right.up" catalog="system" symbolScale="large"/>
                                                     <backgroundConfiguration key="background" cornerRadius="23" strokeWidth="3" strokeOutset="0.0">
                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -48,6 +52,9 @@
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="SIP-Gx-B6g" secondAttribute="bottom" id="opy-x9-MmV"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82164740560000005" green="0.83193725350000003" blue="0.85496062039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -124,6 +131,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chatContainerViewBottomConstraint" destination="Eba-g9-FE1" id="oY6-pG-eAx"/>
+                        <outlet property="chatContainerViewHeightConstraint" destination="dE3-9M-NVQ" id="s13-hV-t8k"/>
+                        <outlet property="messageTextView" destination="PIq-fa-DDt" id="U4Q-xl-Bso"/>
                         <segue destination="eKg-ft-EZ4" kind="presentation" identifier="segue.Chat.messegesToSignIn" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="57T-Rf-qb8"/>
                     </connections>
                 </viewController>

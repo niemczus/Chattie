@@ -12,11 +12,17 @@ class MessagesVC: UIViewController {
     
     @IBOutlet weak var chatContainerViewBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var chatContainerViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var messageTextView: MessageTextView!
+    
     var chattieUser: ChattieUser!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        messageTextView.growingTextViewDelegate = self
+        
 //        print("ChattieUser from messages")
 //        print(chattieUser ?? "none")
     
@@ -61,5 +67,17 @@ class MessagesVC: UIViewController {
         } catch {
             print(error)
         }
+    }
+}
+
+extension MessagesVC: GrowingTextViewDelegate {
+    func growingTextView(_ growingTextView: GrowingTextView, heightDidChangeTo height: CGFloat) {
+        
+        chatContainerViewHeightConstraint.constant = height + 50
+        
+     print("""
+Height form messagesVC
+\(height)
+""")
     }
 }

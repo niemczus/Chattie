@@ -24,8 +24,6 @@ class PlaceholderTextView: UITextView {
         placeholderLabel.textColor = .lightGray
         placeholderLabel.font = font
         
-        placeholderLabel.text = "Enter a message"
-        
         addSubview(placeholderLabel)
     }
 }
