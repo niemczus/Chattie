@@ -69,6 +69,10 @@
 		32B95A6927D7710A00CA63A4 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B95A6827D7710A00CA63A4 /* Chat.storyboard */; };
 		32B95A6B27D780BE00CA63A4 /* SingInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A6A27D780BE00CA63A4 /* SingInVC.swift */; };
 		32B95A6D27D7820C00CA63A4 /* SingUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */; };
+		32BE6AFA27E2434800127EBB /* MessageStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE6AF927E2434800127EBB /* MessageStyleView.swift */; };
+		32BE6AFD27E2442800127EBB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE6AFC27E2442800127EBB /* Message.swift */; };
+		32BE6AFF27E2468D00127EBB /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE6AFE27E2468D00127EBB /* MessageCell.swift */; };
+		32BE6B0127E255E000127EBB /* MessageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE6B0027E255E000127EBB /* MessageStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +112,10 @@
 		32B95A6827D7710A00CA63A4 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		32B95A6A27D780BE00CA63A4 /* SingInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInVC.swift; sourceTree = "<group>"; };
 		32B95A6C27D7820C00CA63A4 /* SingUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpVC.swift; sourceTree = "<group>"; };
+		32BE6AF927E2434800127EBB /* MessageStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStyleView.swift; sourceTree = "<group>"; };
+		32BE6AFC27E2442800127EBB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		32BE6AFE27E2468D00127EBB /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		32BE6B0027E255E000127EBB /* MessageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				32576B4927DD4270004F9924 /* MessagesVC.swift */,
+				32BE6AFE27E2468D00127EBB /* MessageCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 				3246EB8E27DF9EED0006340C /* PlaceholderTextView.swift */,
 				3286493327E0D517008506C0 /* GrowingTextView.swift */,
 				3286493527E105DF008506C0 /* MessageTextView.swift */,
+				32BE6AF927E2434800127EBB /* MessageStyleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +279,7 @@
 		329FCB6027DF3727008FF52C /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				32BE6AFB27E2440E00127EBB /* Model */,
 				3246EB8D27DF3F9F0006340C /* View */,
 				3246EB8C27DF3F930006340C /* Controller */,
 			);
@@ -301,6 +312,15 @@
 				32B95A6227D747F000CA63A4 /* Info.plist */,
 			);
 			path = Chattie;
+			sourceTree = "<group>";
+		};
+		32BE6AFB27E2440E00127EBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32BE6AFC27E2442800127EBB /* Message.swift */,
+				32BE6B0027E255E000127EBB /* MessageStyle.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,16 +446,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				32067BCA27DB95D900C6AC20 /* StringExtensions.swift in Sources */,
+				32BE6AFF27E2468D00127EBB /* MessageCell.swift in Sources */,
 				32576B4827DD38D3004F9924 /* ChattieUser.swift in Sources */,
 				3286493627E105DF008506C0 /* MessageTextView.swift in Sources */,
 				32B95A5227D747EF00CA63A4 /* AppDelegate.swift in Sources */,
+				32BE6AFA27E2434800127EBB /* MessageStyleView.swift in Sources */,
 				32B95A6B27D780BE00CA63A4 /* SingInVC.swift in Sources */,
 				32B95A6D27D7820C00CA63A4 /* SingUpVC.swift in Sources */,
 				32B95A5C27D747EF00CA63A4 /* Chattie.xcdatamodeld in Sources */,
 				322CFC0427D8F4A300F1E6FF /* RoundedButton.swift in Sources */,
+				32BE6B0127E255E000127EBB /* MessageStyle.swift in Sources */,
 				32B95A5427D747EF00CA63A4 /* SceneDelegate.swift in Sources */,
 				32576B4A27DD4270004F9924 /* MessagesVC.swift in Sources */,
 				3286493427E0D517008506C0 /* GrowingTextView.swift in Sources */,
+				32BE6AFD27E2442800127EBB /* Message.swift in Sources */,
 				3246EB8F27DF9EED0006340C /* PlaceholderTextView.swift in Sources */,
 				322CFC0227D8F25700F1E6FF /* AuthTableViewController.swift in Sources */,
 			);

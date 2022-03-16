@@ -7,22 +7,28 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class MessagesVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chatContainerViewBottomConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var chatContainerViewHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var messageTextView: MessageTextView!
     
     var chattieUser: ChattieUser!
-
+    
+    var messages = [Message(sender: "kyle", body: "What's up?"), Message(sender: "niemczus", body: "Good Meeaan!")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        tableView.dataSource = self
         messageTextView.growingTextViewDelegate = self
         
+        print(chattieUser.userName)
+        
+//        tableView.isScrollEnabled = true
 //        print("ChattieUser from messages")
 //        print(chattieUser ?? "none")
     
@@ -74,10 +80,24 @@ extension MessagesVC: GrowingTextViewDelegate {
     func growingTextView(_ growingTextView: GrowingTextView, heightDidChangeTo height: CGFloat) {
         
         chatContainerViewHeightConstraint.constant = height + 50
-        
-     print("""
-Height form messagesVC
-\(height)
-""")
+
     }
+}
+
+extension MessagesVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as? MessageCell else { return UITableViewCell() }
+        
+        let message = messages[indexPath.row]
+        let isFromCurrentUser = message.sender == chattieUser.userName
+        cell.populate(with: message, isFromCurrentUser: isFromCurrentUser)
+        
+        return cell
+    }
+    
+
 }
