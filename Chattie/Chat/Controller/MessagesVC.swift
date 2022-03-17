@@ -59,7 +59,6 @@ class MessagesVC: UIViewController {
                 var messagesFromFirestore = [Message]()
                 
                 for document in unwrappedSnapshot.documents {
-                    
                     let dictionary = document.data()
                     
                     guard
@@ -75,6 +74,7 @@ class MessagesVC: UIViewController {
                 }
                 self.messages = messagesFromFirestore
                 self.tableView.reloadData()
+                self.tableView.scrollToBottom()
             }
         }
     }
@@ -90,7 +90,10 @@ class MessagesVC: UIViewController {
         
         chatContainerViewBottomConstraint.constant = keyboardHight - bottomInset
         
-//        UIView.animate(withDuration: 0.3, animations: view.layoutIfNeeded)
+        UIView.animate(withDuration: 0.0) {
+            self.view.layoutIfNeeded()
+            self.tableView.scrollToBottom()
+        }
         
     }
     
@@ -124,6 +127,9 @@ class MessagesVC: UIViewController {
     
     
     @IBAction func didTapSend(_ sender: UIButton) {
+        
+        guard messageTextView.text.isEmpty == false else { return }
+        
         messageTextView.endEditing(true)
         sendMessage()
     }
