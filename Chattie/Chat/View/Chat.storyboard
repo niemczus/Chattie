@@ -47,6 +47,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapSend:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yVS-AF-6z5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82164740560000005" green="0.83193725350000003" blue="0.85496062039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -16,6 +16,9 @@ class MessagesVC: UIViewController {
     @IBOutlet weak var chatContainerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var messageTextView: MessageTextView!
     
+    let database = Firestore.firestore()
+    lazy var messagesCollection = database.collection("messages")
+    
     var chattieUser: ChattieUser!
     
     var messages = [Message(sender: "kyle", body: "What's up?"), Message(sender: "niemczus", body: "Good Meeaan!")]
@@ -33,11 +36,13 @@ class MessagesVC: UIViewController {
 //        print(chattieUser ?? "none")
     
         addObservers()
+        observeMessages()
     }
+    
     
     func addObservers() {
         
-            NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidShowNotification,
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidShowNotification,
                                                    object: nil,
                                                    queue: .main,
                                                    using: keyboardWillShow)
@@ -45,6 +50,33 @@ class MessagesVC: UIViewController {
                                                object: nil,
                                                queue: .main,
                                                using: keyboardWillHide)
+    }
+    
+    func observeMessages() {
+        messagesCollection.order(by: "creationDate").addSnapshotListener { snapshot, error in
+            if let unwrappedSnapshot = snapshot {
+                
+                var messagesFromFirestore = [Message]()
+                
+                for document in unwrappedSnapshot.documents {
+                    
+                    let dictionary = document.data()
+                    
+                    guard
+                        let sender = dictionary["sender"] as? String,
+                        let body = dictionary["body"] as? String
+                    else { return }
+                    
+                    print(sender)
+                    print(body)
+                    
+                    let message = Message(sender: sender, body: body)
+                    messagesFromFirestore.append(message)
+                }
+                self.messages = messagesFromFirestore
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func keyboardWillShow(_ notification: Notification) {
@@ -74,6 +106,28 @@ class MessagesVC: UIViewController {
             print(error)
         }
     }
+    
+    func sendMessage() {
+        
+        let dataDictionary: [String : Any] = ["sender" : chattieUser.userName,
+                                              "body" : messageTextView.text ?? "",
+                                              "creationDate" : FieldValue.serverTimestamp()]
+        
+        messagesCollection.addDocument(data: dataDictionary) { error in
+            if let unwrappedError = error {
+                print(unwrappedError)
+            } else {
+                self.messageTextView.text.removeAll()
+            }
+        }
+    }
+    
+    
+    @IBAction func didTapSend(_ sender: UIButton) {
+        messageTextView.endEditing(true)
+        sendMessage()
+    }
+    
 }
 
 extension MessagesVC: GrowingTextViewDelegate {
@@ -91,7 +145,7 @@ extension MessagesVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as? MessageCell else { return UITableViewCell() }
-        
+    
         let message = messages[indexPath.row]
         let isFromCurrentUser = message.sender == chattieUser.userName
         cell.populate(with: message, isFromCurrentUser: isFromCurrentUser)

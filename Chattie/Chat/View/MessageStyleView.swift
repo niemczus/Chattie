@@ -22,7 +22,7 @@ class MessageStyleView: UIView {
         switch messageStyle {
         case .sent:
             backgroundColor = UIColor(named: "chatBubbleGreen")
-            layer.borderWidth = 1
+            layer.borderWidth = 0
             layer.borderColor = UIColor.lightGray.cgColor
             
         case .recived:
