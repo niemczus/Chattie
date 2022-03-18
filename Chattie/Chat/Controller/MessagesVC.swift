@@ -42,14 +42,21 @@ class MessagesVC: UIViewController {
     
     func addObservers() {
         
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidShowNotification,
-                                                   object: nil,
-                                                   queue: .main,
-                                                   using: keyboardWillShow)
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardDidHideNotification,
-                                               object: nil,
-                                               queue: .main,
-                                               using: keyboardWillHide)
+        // Subscribe to Keyboard Will Show notifications
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(keyboardWillShow(_:)),
+                    name: UIResponder.keyboardWillShowNotification,
+                    object: nil
+                )
+
+                // Subscribe to Keyboard Will Hide notifications
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(keyboardWillHide(_:)),
+                    name: UIResponder.keyboardWillHideNotification,
+                    object: nil
+                )
     }
     
     func observeMessages() {
@@ -79,26 +86,20 @@ class MessagesVC: UIViewController {
         }
     }
     
-    func keyboardWillShow(_ notification: Notification) {
-        guard
-            let userInfo = notification.userInfo,
-            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
-        else { return }
+    @objc dynamic func keyboardWillShow(_ notification: NSNotification) {
         
-        let bottomInset = view.safeAreaInsets.bottom
-        let keyboardHight = keyboardFrame.cgRectValue.height
-        
-        chatContainerViewBottomConstraint.constant = keyboardHight - bottomInset
-        
-        UIView.animate(withDuration: 0.0) {
+        animateWithKeyboard(notification: notification) { keyboardFrame in
+            let constant = keyboardFrame.height - 20
+            self.chatContainerViewBottomConstraint.constant = constant
+        }
             self.view.layoutIfNeeded()
             self.tableView.scrollToBottom()
         }
-        
-    }
     
-    func keyboardWillHide(_ notification: Notification) {
-        chatContainerViewBottomConstraint.constant = 0
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        animateWithKeyboard(notification: notification) { keyboardframe in
+            self.chatContainerViewBottomConstraint.constant = 0
+        }
     }
     
     @IBAction func didTapSignOut(_ sender: UIBarButtonItem) {
@@ -158,6 +159,40 @@ extension MessagesVC: UITableViewDataSource {
         
         return cell
     }
-    
+}
 
+extension MessagesVC {
+    func animateWithKeyboard(
+        notification: NSNotification,
+        animations: ((_ keyboardFrame: CGRect) -> Void)?
+    ) {
+        // Extract the duration of the keyboard animation
+        let durationKey = UIResponder.keyboardAnimationDurationUserInfoKey
+        let duration = notification.userInfo![durationKey] as! Double
+        
+        // Extract the final frame of the keyboard
+        let frameKey = UIResponder.keyboardFrameEndUserInfoKey
+        let keyboardFrameValue = notification.userInfo![frameKey] as! NSValue
+        
+        // Extract the curve of the iOS keyboard animation
+        let curveKey = UIResponder.keyboardAnimationCurveUserInfoKey
+        let curveValue = notification.userInfo![curveKey] as! Int
+        let curve = UIView.AnimationCurve(rawValue: curveValue)!
+
+        // Create a property animator to manage the animation
+        let animator = UIViewPropertyAnimator(
+            duration: duration,
+            curve: curve
+        ) {
+            // Perform the necessary animation layout updates
+            animations?(keyboardFrameValue.cgRectValue)
+            
+            // Required to trigger NSLayoutConstraint changes
+            // to animate
+            self.view?.layoutIfNeeded()
+        }
+        
+        // Start the animation
+        animator.startAnimation()
+    }
 }
